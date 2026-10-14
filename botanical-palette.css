@@ -1,0 +1,37 @@
+/* Botanical color study. Preserve the night sky, original type, and layouts.
+   The approved Sky & Paper, Refined palette is fixed for this release. */
+body[data-preview-theme="sky-paper-refined"][data-palette="botanical"] {
+ --paper:#f7f4d5;
+ background:#f7f4d5;
+}
+body[data-preview-theme="sky-paper-refined"][data-palette="botanical"] :is(.persistent-header,.brand-section,#about,#research,#work,.contact,footer) {
+ --ink:#0a3323;--muted:#4e6350;--line:#0a33232e;
+ --paper:#f7f4d5;--paper-light:#fffbed;--blue:#105666;
+ --readable-link:#105666;--focus:#105666;
+ --red:#6e4446;--text-red:#6e4446;
+ color:var(--ink);
+}
+body[data-preview-theme="sky-paper-refined"][data-palette="botanical"] .persistent-header {background:#f7f4d5f5}
+body[data-preview-theme="sky-paper-refined"][data-palette="botanical"] .brand-section {background:#fffbed}
+body[data-preview-theme="sky-paper-refined"][data-palette="botanical"] #about {background:#f7f4d5}
+body[data-preview-theme="sky-paper-refined"][data-palette="botanical"] .about-tagline span:last-child {color:#2e6b4e}
+body[data-preview-theme="sky-paper-refined"][data-palette="botanical"] .background-within-work .timeline article {background:#fffbed;border-color:#83995860}
+body[data-preview-theme="sky-paper-refined"][data-palette="botanical"] #research {background:#e5eed5}
+body[data-preview-theme="sky-paper-refined"][data-palette="botanical"] .research-note {background:#fffbed;box-shadow:6px 6px 0 #688a4526}
+body[data-preview-theme="sky-paper-refined"][data-palette="botanical"] #work {background:#f7f4d5}
+body[data-preview-theme="sky-paper-refined"][data-palette="botanical"] .project {background:#fffbed;border-color:#0a33232e}
+body[data-preview-theme="sky-paper-refined"][data-palette="botanical"] .project details {border-color:#d3968c88}
+body[data-preview-theme="sky-paper-refined"][data-palette="botanical"] .project summary {color:#105666}
+body[data-preview-theme="sky-paper-refined"][data-palette="botanical"] .about-notes .about-card {background:#eadfc6;border-color:#c2b08a;box-shadow:2px 6px 13px #0a332315}
+body[data-preview-theme="sky-paper-refined"][data-palette="botanical"] .about-notes .language-card {background:#d6e7d6;border-color:#8fb89a}
+body[data-preview-theme="sky-paper-refined"][data-palette="botanical"] .about-notes .about-card::after {border-color:transparent transparent #f7f4d5 #c2b08a}
+body[data-preview-theme="sky-paper-refined"][data-palette="botanical"] .about-notes .language-card::after {border-color:transparent transparent #f7f4d5 #8fb89a}
+body[data-preview-theme="sky-paper-refined"][data-palette="botanical"] .about-notes .tape {background:#d3968c99}
+body[data-preview-theme="sky-paper-refined"][data-palette="botanical"] .language-passport .language-stamp {background:#fffbed80;border-color:#4e8f6f55}
+body[data-preview-theme="sky-paper-refined"][data-palette="botanical"] .language-stamp .language-code {background:#1b4d37;color:#f7f4d5;border-color:#fffbed;box-shadow:0 3px 0 #0a332330}
+body[data-preview-theme="sky-paper-refined"][data-palette="botanical"] .contact {background:linear-gradient(145deg,#1b4d37,#0a3323 70%);color:#f7f4d5;border-top-color:#4e8f6f}
+body[data-preview-theme="sky-paper-refined"][data-palette="botanical"] .contact h2 {color:#eadfc6}
+body[data-preview-theme="sky-paper-refined"][data-palette="botanical"] .contact :is(.contact-actions>p,.contact-email,.contact-links a) {color:#f7f4d5;text-decoration-color:#d3968c}
+body[data-preview-theme="sky-paper-refined"][data-palette="botanical"] .contact .button {background:#d3968c;color:#0a3323;border-color:#d3968c;box-shadow:0 3px 0 #6e444666}
+body[data-preview-theme="sky-paper-refined"][data-palette="botanical"] .contact :is(a,button):focus-visible {outline-color:#f7f4d5}
+body[data-preview-theme="sky-paper-refined"][data-palette="botanical"] footer {background:#eadfc6;color:#0a3323}

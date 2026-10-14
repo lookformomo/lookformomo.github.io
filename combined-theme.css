@@ -1,0 +1,144 @@
+/* Peter Pan / Sky & Paper, Refined.
+   Original portfolio styles supply the typography and layout of affiliations,
+   About Me, experience, research, and projects. This file supplies color,
+   hero scenery, the retained note cards, and the contact illustration only. */
+@font-face{font-family:'Park Sans';src:url('/assets/fonts/dm-sans.woff') format('woff');font-style:normal;font-weight:100 1000;font-display:swap}
+body[data-preview-theme="sky-paper-refined"]{
+ --paper:#fbf5e8;--paper-light:#fffaf1;--cloud:#fffaf1;
+ --ink:#203447;--muted:#526677;--line:#2034472b;
+ --blue:#24587a;--sky-light:#cadbe4;--readable-link:#24587a;
+ --yellow:#f4d89b;--gold:#dca65e;--red:#9c4e3e;--text-red:#9c4e3e;
+ --night:#0a162c;--night-mid:#142b45;--night-ink:#fff6dc;
+ --night-muted:#cadbe4;--jade:#91bdad;--focus:#24587a;
+ --headline-font:'Gill Sans','Gill Sans MT','Avenir Next','Helvetica Neue',Arial,sans-serif;
+ background:var(--paper);color:var(--ink);
+}
+/* Keep the readable opening and its night palette while restoring the interior. */
+body[data-preview-theme="sky-paper-refined"] .hero{
+ background:radial-gradient(ellipse at 80% 20%,#294561 0%,#142b45 37%,#0a162c 80%);
+ color:var(--night-ink);padding-top:77px;padding-bottom:160px;
+}
+body[data-preview-theme="sky-paper-refined"][data-preview-background="illustrated"] .hero{
+ background-image:url('/assets/themes/london-starry-sky.svg'),radial-gradient(ellipse at 80% 20%,#294561 0%,#142b45 37%,#0a162c 80%);
+ background-size:cover,auto;background-position:center bottom;background-repeat:no-repeat;
+}
+body[data-preview-theme="sky-paper-refined"] .hero-grid{grid-template-columns:1.12fr 1fr;gap:48px;max-width:1240px;align-items:center}
+body[data-preview-theme="sky-paper-refined"] .hero .eyebrow{display:block;padding:0;max-width:580px;font-size:11px;line-height:1.7;color:var(--night-muted);background:none;box-shadow:none;transform:none;letter-spacing:1.1px;text-shadow:0 0 16px #cadbe430;margin-bottom:26px}
+body[data-preview-theme="sky-paper-refined"] .hero h1{font-family:var(--headline-font);font-size:clamp(49px,5.2vw,73px);font-weight:750;line-height:1.13;letter-spacing:-.035em;color:var(--night-ink);text-shadow:none;margin:0 0 28px}
+body[data-preview-theme="sky-paper-refined"] .hero h1 span{color:var(--yellow);background:none;text-shadow:none}
+body[data-preview-theme="sky-paper-refined"] .hero .professional-line{font-size:17px;font-weight:400;line-height:1.8;color:var(--night-ink);max-width:none;margin-bottom:21px}
+body[data-preview-theme="sky-paper-refined"] .hero-focus{margin:0 0 31px;max-width:none}
+body[data-preview-theme="sky-paper-refined"] .hero-focus li{font-size:17px;line-height:1.75;color:var(--night-muted);border-color:#91bdad80;padding-top:9px;padding-bottom:9px}
+body[data-preview-theme="sky-paper-refined"] .hero .actions{gap:17px 22px;align-items:center}
+body[data-preview-theme="sky-paper-refined"] .hero .text-link{font-size:14px;color:var(--night-ink);text-decoration-color:#f4d89b80}
+body[data-preview-theme="sky-paper-refined"] .hero .location{color:var(--night-muted);font-size:11px;font-weight:500;line-height:1.6;letter-spacing:1.1px;margin-top:28px;margin-bottom:0}
+body[data-preview-theme="sky-paper-refined"] .hero .button{background:var(--yellow);color:var(--ink);border-color:var(--yellow);border-radius:25px;box-shadow:0 3px 0 #dca65e66}
+body[data-preview-theme="sky-paper-refined"] .hero>.cloud{display:none}
+body[data-preview-theme="sky-paper-refined"] .hero :is(a,button):focus-visible{outline-color:var(--yellow)}
+body[data-preview-theme="sky-paper-refined"] .mind-scene{padding:8px 0 0;background:none;border:0;box-shadow:none;border-radius:0;transform:none;min-width:0}
+body[data-preview-theme="sky-paper-refined"] .mind-world{background:none;max-height:414px;width:100%;display:block;margin:auto}
+body[data-preview-theme="sky-paper-refined"] .scene-label{color:var(--night-muted);font-size:11px;letter-spacing:1.4px;margin-bottom:10px}
+body[data-preview-theme="sky-paper-refined"] .scene-caption{padding:17px 15px 15px;margin:10px 10px 0;background:#0a162c66;border:1px solid #cadbe433;border-radius:12px}
+body[data-preview-theme="sky-paper-refined"] .scene-caption>span{color:var(--jade);font-size:11px;letter-spacing:.7px;line-height:1.6}
+body[data-preview-theme="sky-paper-refined"] .scene-caption p{color:var(--night-ink);font-size:16px;line-height:1.75;margin:9px 0 0;min-height:56px}
+body[data-preview-theme="sky-paper-refined"] .lens-controls{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin-top:19px}
+body[data-preview-theme="sky-paper-refined"] .lens-controls button{background:#142b45;color:var(--night-ink);border:1px solid #cadbe45c;border-radius:25px;font-size:12px;padding:11px 13px;min-height:44px}
+body[data-preview-theme="sky-paper-refined"] .lens-controls button.selected{background:var(--yellow);color:var(--ink);border-color:var(--yellow)}
+
+/* Color-only adaptations leave original section typography and spacing intact. */
+body[data-preview-theme="sky-paper-refined"] .brand-section{background:var(--paper-light)}
+body[data-preview-theme="sky-paper-refined"] :is(.brand-context,.brand-role,.affiliation-heading){color:var(--muted)}
+body[data-preview-theme="sky-paper-refined"] :is(#about,#work){background:var(--paper)}
+body[data-preview-theme="sky-paper-refined"] .about-tagline span:last-child{color:#315f57}
+body[data-preview-theme="sky-paper-refined"] .background-within-work .timeline article{background:var(--paper-light)}
+body[data-preview-theme="sky-paper-refined"] .timeline-date{color:var(--text-red)}
+body[data-preview-theme="sky-paper-refined"] #research{background:#e7eef0;color:var(--ink)}
+body[data-preview-theme="sky-paper-refined"] .research-note{background:var(--paper-light)}
+body[data-preview-theme="sky-paper-refined"] .research-list article>span{color:var(--text-red)}
+body[data-preview-theme="sky-paper-refined"] .interest-icon{stroke:var(--blue)}
+body[data-preview-theme="sky-paper-refined"] .project{background:var(--paper-light)}
+body[data-preview-theme="sky-paper-refined"] .project .eyebrow{color:var(--text-red)}
+
+/* Retain the current Skills and Languages cards as requested. */
+body[data-preview-theme="sky-paper-refined"] .about-notes{gap:31px;font-family:'Park Sans','Avenir Next','Segoe UI',Arial,sans-serif}
+body[data-preview-theme="sky-paper-refined"] .about-notes .about-card{padding:35px 29px 27px;background:#f7e6b5;border:1px solid #dac89c;border-radius:2px;box-shadow:2px 6px 13px #20344715;transform:none}
+body[data-preview-theme="sky-paper-refined"] .about-notes .language-card{background:#dae9e0;border-color:#b9cbbf;transform:none}
+body[data-preview-theme="sky-paper-refined"] .about-notes .about-card::after{border-color:transparent transparent #fbf5e8 #d6bd81}
+body[data-preview-theme="sky-paper-refined"] .about-notes .language-card::after{border-color:transparent transparent #fbf5e8 #adc5b7}
+body[data-preview-theme="sky-paper-refined"] .about-notes .tape{background:#dca65e70}
+body[data-preview-theme="sky-paper-refined"] .about-notes .eyebrow{color:var(--ink);font-family:'Avenir Next','Gill Sans','Helvetica Neue',Arial,sans-serif;font-size:23px;font-weight:750;line-height:1.25;letter-spacing:1.8px;margin-bottom:24px}
+body[data-preview-theme="sky-paper-refined"] .tool-row b{font-size:16px;font-weight:650}
+body[data-preview-theme="sky-paper-refined"] .tool-row p{font-size:16px;line-height:1.75;margin-bottom:17px}
+body[data-preview-theme="sky-paper-refined"] .language-passport .language-stamp{padding:14px 15px;margin:13px 0;background:#fffaf080;border-color:#aabfc766}
+body[data-preview-theme="sky-paper-refined"] .language-stamp .language-code{background:#315f57;color:#fffaf1;border:2px solid #fffaf1;box-shadow:0 3px 0 #24587a30;width:64px;height:64px}
+body[data-preview-theme="sky-paper-refined"] .language-stamp-copy strong{font-size:16px;font-weight:650}
+body[data-preview-theme="sky-paper-refined"] .language-stamp-copy>span{font-size:13px;line-height:1.6;color:var(--muted)}
+
+/* Larger logos sit behind the right side, overlapping about 30% of their width
+   with the text column. The low opacity preserves readable foreground copy. */
+body[data-preview-theme="sky-paper-refined"] .background-within-work .timeline{align-items:stretch}
+body[data-preview-theme="sky-paper-refined"] .background-within-work .timeline article{display:block;position:relative;isolation:isolate;overflow:hidden}
+body[data-preview-theme="sky-paper-refined"] .background-within-work .timeline article>div{max-width:65%;position:relative;z-index:1}
+body[data-preview-theme="sky-paper-refined"] .background-within-work .timeline .experience-logo-frame{position:absolute;right:22px;left:auto;top:50%;transform:translateY(-50%);width:45%;height:140px;max-width:270px;opacity:.12;mix-blend-mode:multiply;z-index:0;pointer-events:none;user-select:none;overflow:hidden}
+
+/* Contact sketches stay in the layout, above a clear footer margin. */
+body[data-preview-theme="sky-paper-refined"] .contact{position:relative;isolation:isolate;overflow:hidden;background:linear-gradient(145deg,#142b45,#0a162c 70%);color:var(--night-ink);border-top:1px solid #426480;padding-bottom:160px}
+body[data-preview-theme="sky-paper-refined"] .contact h2{color:var(--yellow);font-size:clamp(58px,6.2vw,84px);font-weight:650;letter-spacing:-.03em;line-height:1.15;margin-bottom:24px}
+body[data-preview-theme="sky-paper-refined"] .contact .contact-actions>p{color:var(--night-ink);font-size:18px;line-height:1.8;max-width:none;width:100%;text-wrap:wrap;white-space:normal;margin-bottom:26px}
+body[data-preview-theme="sky-paper-refined"] .contact .button{background:var(--yellow);color:var(--ink);border-color:var(--yellow);border-radius:25px;box-shadow:0 3px 0 #dca65e66}
+body[data-preview-theme="sky-paper-refined"] .contact-email,body[data-preview-theme="sky-paper-refined"] .contact-links a{color:var(--night-ink);text-decoration-color:#f4d89b80}
+body[data-preview-theme="sky-paper-refined"] .contact-email{font-size:17px}
+body[data-preview-theme="sky-paper-refined"] .contact-links{gap:24px;margin-top:32px;font-size:15px}
+body[data-preview-theme="sky-paper-refined"] .contact :is(a,button):focus-visible{outline-color:var(--yellow)}
+body[data-preview-theme="sky-paper-refined"] footer{background:var(--paper);color:var(--ink)}
+
+@media(max-width:1100px){body[data-preview-theme="sky-paper-refined"] .hero-grid{gap:32px}body[data-preview-theme="sky-paper-refined"] .hero h1{font-size:clamp(49px,5.4vw,66px)}}
+@media(max-width:850px){body[data-preview-theme="sky-paper-refined"] .hero-grid{grid-template-columns:1fr;gap:40px}body[data-preview-theme="sky-paper-refined"] .hero{padding-top:54px;padding-bottom:140px}body[data-preview-theme="sky-paper-refined"] .hero h1{font-size:clamp(49px,7.8vw,68px);max-width:650px}body[data-preview-theme="sky-paper-refined"] .mind-scene{padding-top:0;max-width:480px}body[data-preview-theme="sky-paper-refined"] .contact .contact-actions>p{font-size:16px}}
+@media(max-width:620px){
+ body[data-preview-theme="sky-paper-refined"] .hero{padding-top:40px;padding-bottom:145px;background-size:auto 100%,auto;background-position:right bottom}
+ body[data-preview-theme="sky-paper-refined"] .hero h1{font-size:clamp(43px,11.5vw,58px);line-height:1.17;letter-spacing:-.03em}
+ body[data-preview-theme="sky-paper-refined"] .hero .eyebrow{font-size:10px}
+ body[data-preview-theme="sky-paper-refined"] .hero .professional-line,body[data-preview-theme="sky-paper-refined"] .hero-focus li{font-size:16px}
+ body[data-preview-theme="sky-paper-refined"] .mind-world{max-height:355px}
+ body[data-preview-theme="sky-paper-refined"] .scene-caption{margin:9px 0 0;padding:16px 12px}
+  body[data-preview-theme="sky-paper-refined"] .about-notes .about-card{padding:32px 24px 24px}
+ body[data-preview-theme="sky-paper-refined"] .about-notes .eyebrow{font-size:22px}
+ body[data-preview-theme="sky-paper-refined"] .background-within-work .timeline .experience-logo-frame{right:18px;opacity:.1}
+ body[data-preview-theme="sky-paper-refined"] .contact{padding-bottom:140px}
+ body[data-preview-theme="sky-paper-refined"] .contact h2{font-size:60px}
+ body[data-preview-theme="sky-paper-refined"] .contact-links{flex-wrap:wrap;gap:17px 23px;font-size:14px}
+  }
+
+/* Common image frames keep each logo centered before and after measurement. */
+.background-within-work .timeline .experience-logo-frame{display:block;position:relative;grid-column:2;grid-row:1 / span 2;align-self:center;justify-self:center;width:100%;height:100px;max-width:105px;opacity:.85;overflow:hidden;pointer-events:none}
+.background-within-work .timeline .experience-logo-frame>.experience-card-logo,
+body[data-preview-theme="sky-paper-refined"] .background-within-work .timeline .experience-logo-frame>.experience-card-logo{display:block;position:absolute;left:50%;top:50%;right:auto;transform:translate(-50%,-50%);width:100%;height:100%;max-width:none;max-height:none;object-fit:contain;object-position:center;opacity:1;mix-blend-mode:normal}
+/* The figure now starts alongside the heading rather than below the invitation. */
+.contact-composition{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:44px;align-items:start;margin-top:0}
+.contact-actions{min-width:0}
+.contact-actions>p{font-size:16px;line-height:1.8}
+.contact-actions .contact-email{margin-top:22px}
+.contact-actions .contact-links{display:flex;flex-wrap:wrap;gap:18px 24px;margin-top:30px;line-height:1.8}
+.contact-sketches{margin:0;min-width:0;pointer-events:none;align-self:start}
+.contact-sketches img{display:block;width:100%;height:auto;max-height:300px;object-fit:contain;opacity:.72}
+body[data-preview-theme="sky-paper-refined"][data-preview-background="quiet"] .contact-sketches{display:none}
+body[data-preview-theme="sky-paper-refined"][data-preview-background="quiet"] .contact-composition{grid-template-columns:1fr}
+@media(max-width:850px){.contact-composition{gap:26px}.contact-sketches img{max-height:250px}}
+/* On phones, put the decorative studies before the actions so the download
+   links remain the final content above the footer. */
+@media(max-width:620px){
+ .contact-composition{grid-template-columns:1fr;gap:18px;margin-top:0}
+ .contact-actions{display:contents}
+ .contact-actions>h2{grid-row:1;margin-bottom:0}
+ .contact-actions>p{grid-row:2;margin-bottom:0!important}
+ .contact-sketches{grid-row:3;width:100%;max-width:480px;margin:0 auto 10px}
+ .contact-sketches img{max-height:230px}
+ .contact-actions>.button{grid-row:4;justify-self:start}
+ .contact-actions>.contact-email{grid-row:5;margin-top:0}
+ .contact-actions>.contact-links{grid-row:6;margin-top:0}
+}
+
+/* Experience text remains above the decorative logo artwork. */
+.background-within-work .timeline article{position:relative;isolation:isolate;overflow:hidden}
+.background-within-work .timeline .experience-watermark{position:absolute;z-index:0;left:50%;top:50%;transform:translate(-50%,-50%);width:78%;height:72%;max-width:360px;max-height:170px;object-fit:contain;opacity:.065;mix-blend-mode:multiply;pointer-events:none;user-select:none}
+.background-within-work .timeline article>.timeline-date,.background-within-work .timeline article>div{position:relative;z-index:1}
